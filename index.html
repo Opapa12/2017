@@ -88,7 +88,7 @@
   // キャラクターモデルの初期化
   var load_num = 1;
   var loader = new THREE.TextureLoader();
-  loader.load( 'moon.jpg', function ( texture ) {
+  loader.load( 'moon2048.jpg', function ( texture ) {
     var geometry = new THREE.SphereGeometry( 0.5, 32, 16 );
     var material = new THREE.MeshLambertMaterial( { map: texture } );
     mesh = new THREE.Mesh( geometry, material );
@@ -138,8 +138,8 @@
   load_num++;
   var font_loader = new THREE.FontLoader();
   font_loader.load( 'helvetiker_regular.typeface.json', function ( response  ) {
-    var material_font = new THREE.MeshBasicMaterial( { color: 0xff6060 } );
-    var geometry_ready = new THREE.TextGeometry( 'Ready?', {
+    var material_font = new THREE.MeshBasicMaterial( { color: #060a3ff } );
+    var geometry_ready = new THREE.TextGeometry( 'ARE YOU READY?', {
       font: response,
       size: 1.5,
       height: 0.1,
@@ -147,7 +147,7 @@
       bevelEnabled: false,
     } );
     geometry_ready.center();
-    var geometry_clear = new THREE.TextGeometry( 'Clear!', {
+    var geometry_clear = new THREE.TextGeometry( 'CLEAR!', {
       font: response,
       size: 1.5,
       height: 0.1,
@@ -155,7 +155,7 @@
       bevelEnabled: false,
     } );
     geometry_clear.center();
-    var geometry_gover = new THREE.TextGeometry( 'GAME OVER', {
+    var geometry_gover = new THREE.TextGeometry( 'GAME! OVER!', {
       font: response,
       size: 1.5,
       height: 0.1,
